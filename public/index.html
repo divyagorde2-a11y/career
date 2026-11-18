@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CareerPilot AI | Your personal AI career and placement companion</title>
+<meta name="description" content="CareerPilot AI helps students find roles that fit, close skill gaps, improve resumes and track applications, with verified recruiters and clear explanations.">
+<meta name="theme-color" content="#17365D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CareerPilot AI">
+<meta property="og:description" content="CareerPilot AI helps students find roles that fit, close skill gaps, improve resumes and track applications, with verified recruiters and clear explanations.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%2317365D'/%3E%3Cpath d='M23.5 10.5 19.2 24l-2.6-6.6L10 14.8z' fill='%23C49A3A'/%3E%3C/svg%3E">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Instrument+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700;800&display=swap">
+<style>
+/* Layout concept: left-aligned editorial marketing page; one deep-navy trust band; product shown through live, labelled examples. */
+:root{
+  --bg:#F7F7F4; --surface:#FFFFFF; --ink:#17365D; --text:#2B3647; --muted:#5A667A;
+  --line:#E1E1D9; --line-strong:#C9C9BF;
+  --primary:#17365D; --on-primary:#FFFFFF; --primary-hover:#0F2947;
+  --gold:#C49A3A; --gold-text:#80610F; --gold-soft:#F6EBCF; --navy-soft:#E6ECF4;
+  --deep:#17365D; --on-deep:#F4F6FA; --on-deep-muted:#BCC8DA; --deep-line:#2F4E78; --deep-eyebrow:#E2BC62;
+  --good:#1B6E46; --good-soft:#DDF0E5; --warn:#8A5A0B; --warn-soft:#F9EBCB; --bad:#A63A2A;
+  --mark:#17365D;
+  --shadow:0 1px 2px rgba(23,54,93,.06),0 14px 32px -16px rgba(23,54,93,.22);
+  --font-display:"Schibsted Grotesk","Segoe UI",system-ui,-apple-system,sans-serif;
+  --font-body:"Instrument Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --r-md:12px; --r-lg:18px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D192A; --surface:#14243A; --ink:#EEF2F8; --text:#C8D2E0; --muted:#97A5BA;
+    --line:#25395A; --line-strong:#38557F;
+    --primary:#C49A3A; --on-primary:#0D192A; --primary-hover:#D4AB4C;
+    --gold-text:#E2BC62; --gold-soft:#3A2F14; --navy-soft:#1B2F4D;
+    --deep:#0A1424; --deep-line:#1F3354;
+    --good:#58C48C; --good-soft:#143A2A; --warn:#E6B75C; --warn-soft:#3A2D12; --bad:#F08E7C;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 14px 32px -16px rgba(0,0,0,.55);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D192A; --surface:#14243A; --ink:#EEF2F8; --text:#C8D2E0; --muted:#97A5BA;
+  --line:#25395A; --line-strong:#38557F;
+  --primary:#C49A3A; --on-primary:#0D192A; --primary-hover:#D4AB4C;
+  --gold-text:#E2BC62; --gold-soft:#3A2F14; --navy-soft:#1B2F4D;
+  --deep:#0A1424; --deep-line:#1F3354;
+  --good:#58C48C; --good-soft:#143A2A; --warn:#E6B75C; --warn-soft:#3A2D12; --bad:#F08E7C;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 14px 32px -16px rgba(0,0,0,.55);
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+img,svg{max-width:100%}
+h1,h2,h3,h4,p,ul,ol{margin:0}
+h1,h2,h3{font-family:var(--font-display);color:var(--ink);text-wrap:balance;letter-spacing:-.015em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-60px;z-index:80;padding:10px 14px;background:var(--primary);color:var(--on-primary);border-radius:8px;text-decoration:none;font-weight:600}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 8px)}
+.wrap{width:100%;max-width:1220px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* Header */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+@supports (background:color-mix(in srgb,red,blue)){.site-header{background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}}
+.bar{display:flex;align-items:center;gap:16px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;font:700 1.15rem/1 var(--font-display);color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+.brand b{color:var(--gold-text);font-weight:700}
+.mark .m-bg{fill:var(--mark)} .mark .m-ring{fill:none;stroke:var(--gold);stroke-width:1.6;opacity:.55} .mark .m-pt{fill:var(--gold)}
+.nav{margin-left:auto;display:flex;gap:2px;align-items:center}
+.nav a{padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:500;font-size:.95rem;color:var(--text)}
+.nav a:hover{background:var(--navy-soft);color:var(--ink)}
+.nav .nav-cta{display:none}
+.header-cta{margin-left:6px}
+.sign-in{display:inline-flex;align-items:center;justify-content:center;padding:9px 13px;border-radius:9px;color:var(--ink);font-weight:600;font-size:.92rem;text-decoration:none;border:1px solid var(--line-strong)}
+.sign-in:hover{background:var(--navy-soft)}
+.menu-btn{display:none;margin-left:auto;padding:9px 14px;border-radius:10px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);font:600 .92rem var(--font-body);cursor:pointer}
+@media (max-width:940px){
+  .menu-btn{display:inline-flex}
+  .header-cta,.sign-in{display:none}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;margin:0;padding:8px max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px));background:var(--bg);border-bottom:1px solid var(--line)}
+  .nav.open{display:flex}
+  .nav a{padding:12px 10px}
+  .nav .nav-cta{display:block;margin-top:8px;text-align:center;background:var(--primary);color:var(--on-primary);font-weight:600}
+  .nav .nav-cta:hover{background:var(--primary-hover);color:var(--on-primary)}
+}
+
+/* Buttons and small parts */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:10px;font:600 1rem/1 var(--font-body);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .15s,border-color .15s}
+.btn-primary{background:var(--primary);color:var(--on-primary)}
+.btn-primary:hover{background:var(--primary-hover)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.btn-ghost:hover{background:var(--navy-soft)}
+.btn-light{background:var(--on-deep);color:#17365D}
+.btn-light:hover{background:#FFFFFF}
+.btn-sm{padding:10px 16px;font-size:.92rem}
+.btn[disabled]{opacity:.6;cursor:progress}
+.tag{display:inline-block;font:500 .7rem/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-text)}
+.eyebrow{font:500 .78rem/1.3 var(--font-mono);letter-spacing:.09em;text-transform:uppercase;color:var(--gold-text)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;padding:5px 11px;border-radius:999px;font-size:.85rem;font-weight:500;border:1px solid var(--line-strong);background:var(--surface);color:var(--text)}
+.chip.have{background:var(--good-soft);border-color:transparent;color:var(--good)}
+.chip.improve{background:var(--warn-soft);border-color:transparent;color:var(--warn)}
+.chip.learn{background:transparent;border-style:dashed;color:var(--muted)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+
+/* Sections */
+.section{padding-block:clamp(56px,8vw,104px)}
+.section-head{max-width:46rem;display:grid;gap:14px;margin-bottom:clamp(28px,4vw,48px)}
+h2{font-size:clamp(1.8rem,2.6vw + .9rem,2.75rem);line-height:1.1;font-weight:700}
+.lede{font-size:clamp(1.05rem,.4vw + 1rem,1.2rem);max-width:36rem}
+.fine{font-size:.88rem;color:var(--muted);max-width:46rem}
+
+/* Hero */
+.hero{padding-block:clamp(40px,6vw,88px) clamp(48px,7vw,96px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,5vw,64px);align-items:center}
+.hero-copy{display:grid;gap:22px;justify-items:start;min-width:0}
+h1{font-size:clamp(2.3rem,4.4vw + .7rem,4.2rem);line-height:1.03;font-weight:800;letter-spacing:-.025em}
+h1 em{font-style:normal;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:.09em;text-underline-offset:.1em;text-decoration-skip-ink:none}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.facts{list-style:none;padding:0;display:grid;gap:10px;color:var(--muted);font-size:.95rem;margin-top:6px}
+.facts li{display:flex;gap:10px;align-items:baseline}
+.facts li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none;transform:translateY(-2px)}
+@media (max-width:940px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Match card + score ring */
+.match{padding:22px;display:grid;gap:18px;min-width:0}
+.match-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.match h3{font-size:1.3rem}
+.match .sub{color:var(--muted);font-size:.9rem}
+.score-row{display:flex;gap:18px;align-items:center}
+.ring{--p:70;flex:none;width:92px;height:92px;border-radius:50%;background:conic-gradient(var(--gold) calc(var(--p) * 1%),var(--line) 0);display:grid;place-items:center;position:relative;transition:background .3s}
+.ring::before{content:"";position:absolute;inset:9px;background:var(--surface);border-radius:50%}
+.ring span{position:relative;font:700 1.5rem/1 var(--font-display);color:var(--ink);font-variant-numeric:tabular-nums}
+.score-note{font-size:.93rem}
+.score-note strong{color:var(--ink);display:block;font-size:1rem;margin-bottom:2px}
+.group{display:grid;gap:8px}
+.group h4{font:500 .75rem/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.next{border-radius:var(--r-md);background:var(--navy-soft);padding:14px 16px;font-size:.93rem}
+.next strong{color:var(--ink)}
+.caption{font-size:.82rem;color:var(--muted);margin-top:12px}
+
+/* How it works */
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,3vw,40px);counter-reset:s}
+.steps li{display:grid;gap:10px;align-content:start;padding-top:30px;border-top:2px solid var(--line-strong);position:relative}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;top:-17px;left:0;width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--on-primary);display:grid;place-items:center;font:600 .9rem var(--font-mono)}
+.steps h3{font-size:1.3rem}
+@media (max-width:760px){.steps{grid-template-columns:minmax(0,1fr)}}
+
+/* Skill gap demo */
+.demo{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,3vw,36px);align-items:start}
+.demo-controls{display:grid;gap:22px;min-width:0}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+legend{padding:0;margin-bottom:10px;font:500 .78rem/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:8px;position:relative}
+.seg label{padding:9px 14px;border:1px solid var(--line-strong);border-radius:999px;font-weight:600;font-size:.92rem;cursor:pointer;background:var(--surface);color:var(--ink)}
+.seg input:checked + label{background:var(--primary);color:var(--on-primary);border-color:var(--primary)}
+.seg input:focus-visible + label{outline:3px solid var(--gold);outline-offset:2px}
+.skill-grid{display:grid;gap:8px}
+.skill-btn{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;padding:12px 14px;border-radius:var(--r-md);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);font:600 .97rem var(--font-body);cursor:pointer}
+.skill-btn:hover{border-color:var(--ink)}
+.skill-btn .st{flex:none;font:500 .72rem/1 var(--font-mono);letter-spacing:.05em;text-transform:uppercase;padding:6px 9px;border-radius:6px}
+.skill-btn[data-s="0"] .st{color:var(--muted);border:1px dashed var(--line-strong)}
+.skill-btn[data-s="1"] .st{background:var(--warn-soft);color:var(--warn)}
+.skill-btn[data-s="2"] .st{background:var(--good-soft);color:var(--good)}
+.skill-btn[data-s="2"]{border-color:var(--good)}
+.hint{font-size:.88rem;color:var(--muted)}
+.result{padding:24px;display:grid;gap:22px;min-width:0}
+.road{list-style:none;padding:0;display:grid;gap:10px;counter-reset:r}
+.road li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:12px;align-items:start;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--bg)}
+.road li::before{counter-increment:r;content:counter(r);width:26px;height:26px;border-radius:50%;background:var(--navy-soft);color:var(--ink);display:grid;place-items:center;font:600 .8rem var(--font-mono)}
+.road b{color:var(--ink)}
+.road .kind{font:500 .68rem/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;margin-left:6px;padding:3px 6px;border-radius:5px;background:var(--gold-soft);color:var(--gold-text);vertical-align:2px}
+.road p{font-size:.93rem}
+@media (max-width:940px){.demo{grid-template-columns:minmax(0,1fr)}}
+
+/* Feature grid */
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.feat{grid-column:span 2;padding:24px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);display:grid;gap:12px;align-content:start;min-width:0}
+.feat.w3{grid-column:span 3}
+.feat h3{font-size:1.2rem}
+.feat p{font-size:.97rem}
+.feat .note{font-size:.86rem;color:var(--muted)}
+.meters{display:grid;gap:10px;margin-top:4px}
+.meter{display:grid;grid-template-columns:minmax(0,7rem) minmax(0,1fr) 2.6rem;gap:10px;align-items:center;font-size:.85rem}
+.meter .lbl{color:var(--text)}
+.meter .val{font:500 .78rem var(--font-mono);color:var(--muted);text-align:right}
+.track{height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.fill{height:100%;background:var(--gold);width:var(--w)}
+@media (max-width:900px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.feat,.feat.w3{grid-column:span 1}.feat:last-child{grid-column:1/-1}}
+@media (max-width:600px){.bento{grid-template-columns:minmax(0,1fr)}}
+
+/* Application tracker */
+.split{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);align-items:center}
+.split .copy{display:grid;gap:16px;justify-items:start}
+.tracker{overflow:hidden;min-width:0}
+.tracker-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px}
+.stages{list-style:none;padding:0 18px 18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(84px,1fr));gap:8px}
+.stages li{display:grid;gap:6px;font-size:.78rem;color:var(--muted);font-weight:600}
+.stages li::before{content:"";height:6px;border-radius:99px;background:var(--line)}
+.stages li.done::before{background:var(--gold)}
+.stages li.now{color:var(--ink)}
+.stages li.now::before{background:var(--ink)}
+.app-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:14px 18px;border-top:1px solid var(--line)}
+.app-row .role{font-weight:600;color:var(--ink)}
+.app-row .meta{grid-column:1/-1;font-size:.86rem;color:var(--muted)}
+.pill{font:500 .7rem/1 var(--font-mono);text-transform:uppercase;letter-spacing:.05em;padding:6px 9px;border-radius:99px;white-space:nowrap}
+.pill.review{background:var(--navy-soft);color:var(--ink)}
+.pill.short{background:var(--warn-soft);color:var(--warn)}
+.pill.int{background:var(--gold-soft);color:var(--gold-text)}
+.tl{list-style:none;padding:14px 18px 20px;border-top:1px solid var(--line);display:grid;gap:12px;background:var(--bg)}
+.tl li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px;font-size:.9rem}
+.tl time{font:500 .78rem var(--font-mono);color:var(--muted);padding-top:2px}
+@media (max-width:940px){.split{grid-template-columns:minmax(0,1fr)}}
+
+/* Audience tabs */
+.tablist{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:30px}
+.tab{padding:12px 18px;border:0;background:none;font:600 1rem var(--font-body);color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--gold)}
+.tabpanel{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(20px,4vw,56px);align-items:start}
+.tabpanel .lead{display:grid;gap:16px;justify-items:start}
+.tabpanel h3{font-size:1.6rem}
+.checks{list-style:none;padding:0;display:grid;gap:14px}
+.checks li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px}
+.checks li::before{content:"";width:20px;height:20px;margin-top:3px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='9' fill='none' stroke='%23C49A3A' stroke-width='1.6'/%3E%3Cpath d='M6 10.4l2.7 2.6L14 7.4' fill='none' stroke='%23C49A3A' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.checks.later li::before{background:none;border:1.6px dashed var(--line-strong);border-radius:50%;width:18px;height:18px;margin-top:4px}
+@media (max-width:940px){.tabpanel{grid-template-columns:minmax(0,1fr)}}
+
+/* Trust band */
+.deep{background:var(--deep);color:var(--on-deep);border-block:1px solid var(--deep-line)}
+.deep h2,.deep h3{color:var(--on-deep)}
+.deep .eyebrow{color:var(--deep-eyebrow)}
+.deep .lede{color:var(--on-deep-muted)}
+.pillars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,5vw,72px)}
+.pillar{padding:24px 0;border-top:1px solid var(--deep-line);display:grid;gap:8px;align-content:start}
+.pillar h3{font-size:1.2rem}
+.pillar p{color:var(--on-deep-muted)}
+@media (max-width:760px){.pillars{grid-template-columns:minmax(0,1fr)}}
+
+/* Roadmap */
+.road2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,4vw,48px)}
+.road2 h3{font-size:1.3rem;margin-bottom:16px}
+@media (max-width:760px){.road2{grid-template-columns:minmax(0,1fr)}}
+
+/* FAQ */
+.faq{max-width:52rem}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 44px 20px 0;font:600 1.08rem/1.35 var(--font-display);color:var(--ink);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font:500 1.5rem var(--font-body);color:var(--gold-text)}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{padding:0 0 22px;max-width:44rem}
+
+/* Early access form */
+.ea{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,4vw,64px);align-items:start}
+.ea .copy{display:grid;gap:16px}
+.form{padding:28px;display:grid;gap:18px;min-width:0}
+.field{display:grid;gap:6px;min-width:0}
+.lbl{font-weight:600;font-size:.92rem;color:var(--ink)}
+.opt{font-weight:400;color:var(--muted)}
+.input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line-strong);background:var(--bg);color:var(--ink);font:inherit;min-height:48px}
+.input[aria-invalid="true"]{border-color:var(--bad)}
+.err{color:var(--bad);font-size:.85rem;min-height:1.1em}
+.consent{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;font-size:.9rem}
+.consent input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--primary)}
+.form-status{padding:12px 14px;border-radius:10px;font-size:.93rem}
+.form-status.ok{background:var(--good-soft);color:var(--good)}
+.form-status.warn{background:var(--warn-soft);color:var(--warn)}
+@media (max-width:940px){.ea{grid-template-columns:minmax(0,1fr)}}
+
+/* Legal + footer */
+.legal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,5vw,72px);align-items:start}
+.legal h2{font-size:1.7rem;margin-bottom:6px}
+.legal .updated{font-size:.84rem;color:var(--muted);margin-bottom:10px}
+.legal h4{margin:20px 0 6px;font:600 1rem var(--font-body);color:var(--ink)}
+.legal p,.legal li{font-size:.94rem}
+.legal ul{padding-left:1.1rem;display:grid;gap:6px;margin-top:6px}
+@media (max-width:860px){.legal{grid-template-columns:minmax(0,1fr)}}
+.site-footer{border-top:1px solid var(--line);padding-block:36px}
+.foot{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center;font-size:.92rem;color:var(--muted)}
+.foot nav{display:flex;flex-wrap:wrap;gap:6px 20px}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--ink);text-decoration:underline}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+[hidden]{display:none!important}
+</style>
+
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="CareerPilot AI, home">
+      <svg class="mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect class="m-bg" width="34" height="34" rx="9"/><circle class="m-ring" cx="17" cy="17" r="10"/><path class="m-pt" d="M23.5 10.5 19.2 24l-2.6-6.6L10 14.8z"/></svg>
+      <span>CareerPilot <b>AI</b></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#try-it">Try it</a>
+      <a href="#features">Features</a>
+      <a href="#audiences">Who it's for</a>
+      <a href="#trust">Trust</a>
+      <a href="#faq">FAQ</a>
+      <a href="/login.html">Sign in</a>
+      <a class="nav-cta" href="#early-access">Join early access</a>
+    </nav>
+    <a class="sign-in" href="/login.html">Sign in</a>
+    <a class="btn btn-primary btn-sm header-cta" href="#early-access">Join early access</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Early access for students, recruiters and colleges</p>
+      <h1>Turn your career goals into your <em>next opportunity</em></h1>
+      <p class="lede">CareerPilot AI does more than list openings. It shows which roles fit you, which skills you are missing and what to do next, so you can become eligible for the roles you want.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#early-access" data-role="student">Start as a student</a>
+        <a class="btn btn-ghost" href="#early-access" data-role="recruiter">Hire talent</a>
+        <a class="btn btn-ghost" href="/student.html#dashboard">Explore student workspace</a>
+      </div>
+      <ul class="facts">
+        <li>Every recommendation comes with reasons you can read</li>
+        <li>Recruiters are verified before their listings go live</li>
+        <li>You decide what happens to your resume and profile</li>
+      </ul>
+    </div>
+
+    <figure style="margin:0;min-width:0">
+      <div class="panel match" role="group" aria-label="Example match for a data analyst internship">
+        <div class="match-top">
+          <span class="tag">Example match</span>
+          <span class="sub">Verified recruiter</span>
+        </div>
+        <div>
+          <h3>Data Analyst Intern</h3>
+          <p class="sub">Hybrid &middot; 6 months &middot; Stipend listed</p>
+        </div>
+        <div class="score-row">
+          <div class="ring" style="--p:70" role="img" aria-label="Skill match 70 percent"><span>70%</span></div>
+          <p class="score-note"><strong>Skill match</strong>Skills you have count fully. Skills you are improving count half.</p>
+        </div>
+        <div class="group"><h4>You have</h4><div class="chips"><span class="chip have">SQL</span><span class="chip have">Excel</span><span class="chip have">Python</span></div></div>
+        <div class="group"><h4>Improve</h4><div class="chips"><span class="chip improve">Statistics</span></div></div>
+        <div class="group"><h4>Learn</h4><div class="chips"><span class="chip learn">Power BI or Tableau</span></div></div>
+        <p class="next"><strong>Next step:</strong> build one dashboard in Power BI or Tableau. It closes the biggest gap and goes straight into your portfolio.</p>
+      </div>
+      <figcaption class="caption">Illustration of the kind of output students see. Real matches also use your education, interests and preferences.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="how" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2>From a goal to an application in three steps</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Build your profile</h3><p>Add your education, skills, interests and resume once. You can edit or remove any of it later.</p></li>
+      <li><h3>Get a career plan</h3><p>See which roles fit, why they fit, and the exact skills between you and the ones you want.</p></li>
+      <li><h3>Apply with confidence</h3><p>Apply, track every status change and prepare for interviews without leaving the platform.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="try-it">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Try the skill gap analyser</p>
+      <h2>See what stands between you and a role</h2>
+      <p class="lede">Pick a target role and mark the skills you have. The match, the gaps and the roadmap update as you go.</p>
+    </div>
+    <div class="demo">
+      <div class="demo-controls">
+        <fieldset>
+          <legend>Target role</legend>
+          <div class="seg" id="roleSeg">
+            <input class="vh" type="radio" name="role" id="role-da" value="da" checked><label for="role-da">Data analyst</label>
+            <input class="vh" type="radio" name="role" id="role-sw" value="sw"><label for="role-sw">Software developer</label>
+            <input class="vh" type="radio" name="role" id="role-ba" value="ba"><label for="role-ba">Business analyst</label>
+          </div>
+        </fieldset>
+        <div>
+          <p class="lbl" id="skillsLabel" style="margin-bottom:10px">Required skills</p>
+          <div class="skill-grid" id="skillGrid" role="group" aria-labelledby="skillsLabel"></div>
+          <p class="hint" style="margin-top:10px">Tap a skill to cycle: Not yet, Learning, Have.</p>
+        </div>
+      </div>
+      <div class="panel result">
+        <div class="score-row">
+          <div class="ring" id="demoRing" style="--p:70" role="img" aria-label="Skill match 70 percent"><span id="demoPct">70%</span></div>
+          <p class="score-note"><strong id="demoTitle">Skill match</strong><span id="demoVerdict" aria-live="polite"></span></p>
+        </div>
+        <div class="group"><h4>You have</h4><div class="chips" id="gHave"></div></div>
+        <div class="group"><h4>Improve</h4><div class="chips" id="gImprove"></div></div>
+        <div class="group"><h4>Learn</h4><div class="chips" id="gLearn"></div></div>
+        <div class="group"><h4>Your roadmap</h4><ol class="road" id="roadmap"></ol></div>
+        <a class="btn btn-primary" href="#early-access" data-role="student" style="justify-self:start">Get this plan for your own profile</a>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:20px">Sample skills and weights for illustration. The match is a progress indicator. It does not predict whether you will be hired.</p>
+  </div>
+</section>
+
+<section class="section" id="features" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What you get</p>
+      <h2>Tools that help students become eligible, not just browse</h2>
+    </div>
+    <div class="bento">
+      <article class="feat w3" style="background:var(--bg)">
+        <p class="eyebrow">Match</p>
+        <h3>Explainable opportunity matching</h3>
+        <p>Your skills, education, interests and preferences are compared with each role. You see a match percentage, the skills that match, the ones that are missing and what would raise the score.</p>
+        <p class="note">Save, dismiss or apply to any recommendation.</p>
+      </article>
+      <article class="feat w3" style="background:var(--bg)">
+        <p class="eyebrow">Skills</p>
+        <h3>Skill gap analyser</h3>
+        <p>Choose a role and see what you already have, what needs work and what to learn. Each gap becomes a step in a roadmap, and progress is tracked as you add skills.</p>
+        <p class="note">Starts with curated resources. Personalised recommendations come later.</p>
+      </article>
+      <article class="feat">
+        <p class="eyebrow">Resume</p>
+        <h3>Resume analyser</h3>
+        <p>Finds missing role-specific keywords, vague descriptions and weak action verbs, then suggests measurable wording. You review every suggestion before changing anything.</p>
+        <p class="note">Gives a guidance score. It is not an official ATS score and cannot promise selection.</p>
+      </article>
+      <article class="feat">
+        <p class="eyebrow">Interviews</p>
+        <h3>Interview preparation</h3>
+        <p>Practice questions for technical, HR and role-specific rounds, with answer structures and a preparation checklist.</p>
+        <p class="note">An AI mock interviewer is planned for a later release.</p>
+      </article>
+      <article class="feat">
+        <p class="eyebrow">Path</p>
+        <h3>Career path generator</h3>
+        <p>Pick a target role and get the sequence of skills, projects and milestones to reach it. Every milestone links to the skill gap analyser and to matching openings. Edit the plan whenever your goals change.</p>
+      </article>
+      <article class="feat w3">
+        <p class="eyebrow">Progress</p>
+        <h3>Placement readiness</h3>
+        <p>A progress indicator built from parts you can see and act on. It is not a prediction of whether you will be placed.</p>
+        <div class="meters" role="img" aria-label="Example readiness breakdown: profile 90, resume 70, skills 60, projects 40, interview prep 30">
+          <div class="meter"><span class="lbl">Profile</span><span class="track"><span class="fill" style="--w:90%;display:block"></span></span><span class="val">90</span></div>
+          <div class="meter"><span class="lbl">Resume</span><span class="track"><span class="fill" style="--w:70%;display:block"></span></span><span class="val">70</span></div>
+          <div class="meter"><span class="lbl">Skills</span><span class="track"><span class="fill" style="--w:60%;display:block"></span></span><span class="val">60</span></div>
+          <div class="meter"><span class="lbl">Projects</span><span class="track"><span class="fill" style="--w:40%;display:block"></span></span><span class="val">40</span></div>
+          <div class="meter"><span class="lbl">Interview prep</span><span class="track"><span class="fill" style="--w:30%;display:block"></span></span><span class="val">30</span></div>
+        </div>
+        <p class="note">Example profile. Each component explains how it is measured.</p>
+      </article>
+      <article class="feat w3">
+        <p class="eyebrow">Trust</p>
+        <h3>Verified internship marketplace</h3>
+        <p>Recruiter identity and company details are reviewed before a verified label appears. Every listing shows eligibility, pay, location, deadline and when it was last updated. Suspicious or inaccurate listings can be reported and are reviewed.</p>
+        <p class="note">A record of verification and listing changes is kept.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="applications">
+  <div class="wrap split">
+    <div class="copy">
+      <p class="eyebrow">Applications</p>
+      <h2>Always know where every application stands</h2>
+      <p class="lede">A clear status flow, a timeline of every change and reminders before each interview. Updates reach you in the app and by email.</p>
+      <a class="btn btn-ghost" href="#early-access" data-role="student">Join as a student</a>
+    </div>
+    <div class="panel tracker" role="group" aria-label="Example application tracker">
+      <div class="tracker-head"><strong style="color:var(--ink)">My applications</strong><span class="tag">Example data</span></div>
+      <ol class="stages" aria-label="Status flow for the first application">
+        <li class="done">Applied</li><li class="done">Under review</li><li class="done">Shortlisted</li><li class="now">Interview</li><li>Selected</li>
+      </ol>
+      <div class="app-row"><span class="role">Data Analyst Intern</span><span class="pill int">Interview</span><span class="meta">Applied 4 Nov &middot; Interview on 20 Nov, 11:00 IST, online</span></div>
+      <div class="app-row"><span class="role">Backend Developer Intern</span><span class="pill review">Under review</span><span class="meta">Applied 9 Nov &middot; Last update 10 Nov</span></div>
+      <div class="app-row"><span class="role">Business Analyst Trainee</span><span class="pill short">Shortlisted</span><span class="meta">Applied 11 Nov &middot; Recruiter message waiting</span></div>
+      <ol class="tl" aria-label="Timeline for Data Analyst Intern">
+        <li><time>4 Nov</time><span>Applied</span></li>
+        <li><time>6 Nov</time><span>Under review</span></li>
+        <li><time>12 Nov</time><span>Shortlisted by the recruiter</span></li>
+        <li><time>20 Nov</time><span>Interview scheduled. Bring your resume and a photo ID.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="audiences" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap tabs">
+    <div class="section-head">
+      <p class="eyebrow">Who it's for</p>
+      <h2>One platform for the whole placement journey</h2>
+    </div>
+    <div class="tablist" role="tablist" aria-label="Choose your role">
+      <button class="tab" role="tab" id="tab-student" aria-controls="panel-student" aria-selected="true" type="button">Students</button>
+      <button class="tab" role="tab" id="tab-recruiter" aria-controls="panel-recruiter" aria-selected="false" tabindex="-1" type="button">Recruiters</button>
+      <button class="tab" role="tab" id="tab-college" aria-controls="panel-college" aria-selected="false" tabindex="-1" type="button">Colleges</button>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="panel-student" aria-labelledby="tab-student">
+      <div class="lead"><h3>Find the right role and get ready for it</h3><p>Everything a student needs, from first profile to final offer.</p><a class="btn btn-primary" href="#early-access" data-role="student">Start as a student</a></div>
+      <ul class="checks">
+        <li>One profile that drives recommendations, each with a plain-language reason</li>
+        <li>Search by role, company, skill, location, work mode, stipend and deadline</li>
+        <li>A step-by-step roadmap for every skill gap</li>
+        <li>Resume feedback before you apply</li>
+        <li>An application tracker with a timeline, plus interview calendar and reminders</li>
+        <li>Practice questions for the interviews you have coming up</li>
+      </ul>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="panel-recruiter" aria-labelledby="tab-recruiter" hidden>
+      <div class="lead"><h3>Reach prepared candidates and manage them in one place</h3><p>Structured workflows keep hiring consistent and fair.</p><a class="btn btn-primary" href="#early-access" data-role="recruiter">Hire talent</a></div>
+      <ul class="checks">
+        <li>Publish listings under a verified company profile</li>
+        <li>Set skills, eligibility, CGPA, location, pay and deadline, and preview before you publish</li>
+        <li>Filter applicants by skills, education, experience and status using job-related criteria</li>
+        <li>AI-assisted matching supports your decision. It never rejects anyone automatically</li>
+        <li>Shortlist, reject with a reason, move stages and schedule interviews</li>
+        <li>Track applicants per job, stage conversion and time to shortlist</li>
+      </ul>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="panel-college" aria-labelledby="tab-college" hidden>
+      <div class="lead"><h3>Run placements with clear oversight</h3><p>Give your placement cell one view of students, recruiters and outcomes.</p><a class="btn btn-primary" href="#early-access" data-role="college">Talk to us</a></div>
+      <ul class="checks">
+        <li>Review and approve recruiter verification requests</li>
+        <li>Review listings and investigate reported opportunities</li>
+        <li>See readiness and activity by department and batch</li>
+        <li>Report on applications, shortlists, interviews and selections by department, role, company and status</li>
+        <li>Export CSV or PDF reports with access controls</li>
+        <li>Manage departments, academic years and placement announcements</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section deep" id="trust">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Trust</p>
+      <h2>AI that explains itself, and people who stay in charge</h2>
+      <p class="lede">These are the principles CareerPilot AI is built around.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><h3>Verified recruiters</h3><p>Company identity and details are reviewed before a listing carries a verified label. Students can report anything suspicious.</p></div>
+      <div class="pillar"><h3>No black boxes</h3><p>Scores come with the reasons behind them. We show what is measured and how it affects the result.</p></div>
+      <div class="pillar"><h3>A person decides</h3><p>AI supports hiring decisions. It does not make them, and it never rejects a candidate on its own.</p></div>
+      <div class="pillar"><h3>Your data, your control</h3><p>We collect only what the platform needs, explain why, keep resumes private and let you replace or delete them.</p></div>
+    </div>
+    <div class="cta-row" style="margin-top:28px"><a class="btn btn-light" href="#privacy">Read the privacy notice</a></div>
+  </div>
+</section>
+
+<section class="section" id="roadmap">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What's coming</p>
+      <h2>Starting with the core, then going deeper</h2>
+      <p class="lede">Early access focuses on the workflow that has to be reliable first.</p>
+    </div>
+    <div class="road2">
+      <div>
+        <h3>In early access</h3>
+        <ul class="checks">
+          <li>Role-based dashboards and secure sign-in</li>
+          <li>Student profile and private resume upload</li>
+          <li>Opportunity search, filters and application tracking</li>
+          <li>Explainable recommendations and basic skill-gap analysis</li>
+          <li>Recruiter job posting and applicant management</li>
+          <li>College recruiter verification and a placement overview</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Planned for later</h3>
+        <ul class="checks later">
+          <li>AI mock interviewer</li>
+          <li>Advanced resume generation</li>
+          <li>Predictive placement analytics</li>
+          <li>Large-scale learning integrations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Questions</p><h2>Straight answers</h2></div>
+    <div class="faq">
+      <details><summary>Can I use CareerPilot AI today?</summary><p>We are opening access in stages. Join the early access list and tell us whether you are a student, recruiter or college, and we will contact you as access opens for your group.</p></details>
+      <details><summary>What will it cost?</summary><p>Pricing has not been announced yet.</p></details>
+      <details><summary>Is the match percentage a prediction that I will get the job?</summary><p>No. It compares your skills and preferences with what a role asks for, and shows you the reasons. It is a progress indicator, not a forecast of hiring or placement.</p></details>
+      <details><summary>Is the resume score an ATS score?</summary><p>No. The resume analyser gives guidance and a checklist. It is not an official applicant tracking system score and does not guarantee selection. You choose which suggestions to apply.</p></details>
+      <details><summary>Does AI decide who gets hired?</summary><p>No. Matching helps recruiters compare candidates on job-related criteria. Recruiters make the decisions, and nothing is rejected automatically.</p></details>
+      <details><summary>Who can see my resume and profile?</summary><p>Recruiters can open your profile and resume for roles you apply to, and administrators see only what their role allows. Resumes are stored privately and are not available through public links.</p></details>
+      <details><summary>Can I delete my resume or my account?</summary><p>You can replace or delete your resume at any time. You can also ask us to delete your account and records through the contact form below.</p></details>
+      <details><summary>How are recruiters verified?</summary><p>Recruiters submit company name, official email, website and contact details. The college or admin team reviews them before the verified label appears.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="early-access">
+  <div class="wrap ea">
+    <div class="copy">
+      <p class="eyebrow">Early access</p>
+      <h2>Join the list and help shape the first release</h2>
+      <p class="lede">Tell us who you are and we will contact you when access opens for your group. We use these details only for that.</p>
+      <p class="fine">You can also use this form to ask a question or make a data request.</p>
+    </div>
+    <form class="panel form" id="eaForm" name="early-access" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="early-access">
+      <p class="vh" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="field">
+        <label class="lbl" for="name">Full name</label>
+        <input class="input" type="text" id="name" name="name" autocomplete="name" aria-describedby="name-err">
+        <p class="err" id="name-err"></p>
+      </div>
+      <div class="field">
+        <label class="lbl" for="email">Email address</label>
+        <input class="input" type="email" id="email" name="email" autocomplete="email" inputmode="email" aria-describedby="email-err">
+        <p class="err" id="email-err"></p>
+      </div>
+      <div class="field">
+        <label class="lbl" for="role">I am</label>
+        <select class="input" id="role" name="role" aria-describedby="role-err">
+          <option value="">Choose one</option>
+          <option value="student">A student</option>
+          <option value="recruiter">Hiring as a recruiter</option>
+          <option value="college">At a college or placement cell</option>
+          <option value="question">Asking a question or making a data request</option>
+        </select>
+        <p class="err" id="role-err"></p>
+      </div>
+      <div class="field">
+        <label class="lbl" for="org" id="orgLabel">College or company <span class="opt">(optional)</span></label>
+        <input class="input" type="text" id="org" name="org" autocomplete="organization" aria-describedby="org-err">
+        <p class="err" id="org-err"></p>
+      </div>
+      <div class="field">
+        <label class="lbl" for="msg">Message <span class="opt">(optional)</span></label>
+        <input class="input" type="text" id="msg" name="msg" maxlength="500">
+      </div>
+      <div class="field">
+        <label class="consent" for="consent"><input type="checkbox" id="consent" name="consent" aria-describedby="consent-err"><span>I have read the <a href="#privacy">privacy notice</a> and agree to be contacted about CareerPilot AI.</span></label>
+        <p class="err" id="consent-err"></p>
+      </div>
+      <button class="btn btn-primary" type="submit" id="submitBtn">Join early access</button>
+      <p class="form-status" id="formStatus" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
+<section class="section" style="background:var(--surface);border-top:1px solid var(--line)">
+  <div class="wrap legal">
+    <article id="privacy">
+      <h2>Privacy notice</h2>
+      <p class="updated">Last updated 17 November 2026</p>
+      <h4>This website</h4>
+      <p>The early access form asks for your name, email address, role, and optionally your college or company and a short message. We use these only to contact you about CareerPilot AI and to answer your question. We do not sell them.</p>
+      <h4>The platform</h4>
+      <p>When you use CareerPilot AI, we collect only what the service needs: profile details, education, skills, interests, preferences, your resume and an optional photo. We use them to match you with opportunities, support your applications and show your progress.</p>
+      <h4>Who can see it</h4>
+      <ul>
+        <li>Recruiters can open your profile and resume for roles you apply to.</li>
+        <li>College administrators see only the data their role allows.</li>
+        <li>Resumes are stored privately and are not available through public links.</li>
+      </ul>
+      <h4>AI features</h4>
+      <p>Matching, readiness and resume feedback are guidance. People make hiring decisions.</p>
+      <h4>Your choices</h4>
+      <p>You can edit your profile, and replace or delete your resume at any time. You can ask to see, correct or delete your data through the form above<span data-contact hidden> or by email at <a href="#" data-contact-email></a></span>. We keep data while your account is active or while it is needed for the purposes above, and delete it on request.</p>
+    </article>
+    <article id="terms">
+      <h2>Early access terms</h2>
+      <p class="updated">Last updated 17 November 2026</p>
+      <ul>
+        <li><strong>Joining the list.</strong> Joining does not guarantee access or a date, and features may change before launch.</li>
+        <li><strong>Accurate information.</strong> Give truthful details. Recruiters must post genuine, accurate openings and company information.</li>
+        <li><strong>Guidance, not guarantees.</strong> Matches, readiness indicators and resume feedback are guidance. They do not predict hiring or placement outcomes and are not official ATS scores.</li>
+        <li><strong>Acceptable use.</strong> Do not impersonate others, scrape the service, upload harmful files or misuse other people's data.</li>
+        <li><strong>Listings and reports.</strong> We may review, pause or remove listings that are reported as suspicious or inaccurate, and suspend accounts that break these terms.</li>
+        <li><strong>Changes.</strong> We may update these terms. The date above shows the latest version.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <span>&copy; <span id="year">2026</span> CareerPilot AI. Your personal AI career and placement companion.</span>
+    <nav aria-label="Footer">
+      <a href="#how">How it works</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#terms">Terms</a>
+      <a href="#early-access">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  // Set these two values before publishing the site.
+  // formEndpoint: "/" posts to Netlify Forms (form name: early-access). Leave as is on Netlify.
+  // contactEmail: shown in the privacy notice when set.
+  var CONFIG = { formEndpoint: "/", contactEmail: "" };
+
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  /* Navigation */
+  var nav = $("#nav"), menuBtn = $("#menuBtn");
+  menuBtn.addEventListener("click", function () {
+    var open = nav.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(open));
+  });
+  $$("#nav a").forEach(function (a) {
+    a.addEventListener("click", function () { nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); });
+  });
+  var yr = $("#year"); if (yr) yr.textContent = String(new Date().getFullYear());
+  if (CONFIG.contactEmail) {
+    $$("[data-contact]").forEach(function (n) { n.hidden = false; });
+    $$("[data-contact-email]").forEach(function (a) { a.textContent = CONFIG.contactEmail; a.href = "mailto:" + CONFIG.contactEmail; });
+  }
+
+  /* Skill gap demo */
+  var SK = {
+    sql: ["SQL", "Learn SELECT, JOIN and GROUP BY on a free practice database.", "Practise joins and window functions on a real dataset."],
+    xl: ["Excel", "Learn lookups, pivot tables and charts by cleaning a messy sheet.", "Build a small dashboard with pivot tables and slicers."]
+  };
+  var ROLES = {
+    da: { label: "Data analyst", skills: [
+      SK.sql, SK.xl,
+      ["Python", "Learn pandas basics: load, filter and summarise a CSV.", "Analyse a public dataset in a notebook and write up what you found."],
+      ["Statistics", "Cover averages, spread, distributions and sampling with short exercises.", "Practise hypothesis tests and confidence intervals on sample data."],
+      ["Power BI or Tableau", "Connect a dataset and build a one-page report with filters.", "Publish a dashboard with a clear story and add it to your portfolio."]
+    ], state: [2, 2, 2, 1, 0] },
+    sw: { label: "Software developer", skills: [
+      ["Data structures", "Work through arrays, hash maps, stacks, queues and trees.", "Solve mixed practice problems under a time limit."],
+      ["Java or Python", "Pick one language and build small command-line programs.", "Build a project with tests and a readable structure."],
+      ["Git", "Learn commit, branch and merge in a practice repository.", "Open a pull request and resolve a merge conflict."],
+      ["SQL", "Learn SELECT, JOIN and GROUP BY on a free practice database.", "Design tables and write joins for a small app."],
+      ["REST APIs", "Call a public API and read the status codes and JSON.", "Build and document a small API with validation and error handling."],
+      ["Testing", "Write unit tests for functions you already have.", "Add tests to a project and run them on every change."]
+    ], state: [2, 2, 1, 0, 0, 0] },
+    ba: { label: "Business analyst", skills: [
+      SK.xl, SK.sql,
+      ["Requirements gathering", "Turn a vague request into user stories with acceptance criteria.", "Write a short requirements document for a real process."],
+      ["Process mapping", "Map one everyday process as a flowchart with owners and handoffs.", "Find bottlenecks in a mapped process and propose a fix."],
+      ["Dashboards", "Build one chart set that answers a single business question.", "Add filters and write a one-paragraph summary for decision makers."]
+    ], state: [2, 1, 0, 0, 0] }
+  };
+  var STATE_LABEL = ["Not yet", "Learning", "Have"];
+  var role = "da";
+
+  function verdict(p) {
+    if (p >= 85) return "Strong match. Start applying and keep any gaps on your roadmap.";
+    if (p >= 60) return "Close. A few skills stand between you and this role.";
+    if (p >= 30) return "Building. You already have a base to work from.";
+    return "Early days. Start with the first step on your roadmap.";
+  }
+  function fillChips(id, list, cls) {
+    var box = $(id); box.textContent = "";
+    if (!list.length) { box.appendChild(el("span", "hint", "None")); return; }
+    list.forEach(function (n) { box.appendChild(el("span", "chip " + cls, n)); });
+  }
+  function renderResult() {
+    var r = ROLES[role], st = r.state, total = r.skills.length;
+    var have = [], improve = [], learn = [];
+    st.forEach(function (s, i) { (s === 2 ? have : s === 1 ? improve : learn).push(r.skills[i][0]); });
+    var pct = Math.round((have.length + improve.length * 0.5) / total * 100);
+    var ring = $("#demoRing");
+    ring.style.setProperty("--p", String(pct));
+    ring.setAttribute("aria-label", "Skill match " + pct + " percent");
+    $("#demoPct").textContent = pct + "%";
+    $("#demoTitle").textContent = "Skill match for " + r.label.toLowerCase();
+    $("#demoVerdict").textContent = verdict(pct);
+    fillChips("#gHave", have, "have");
+    fillChips("#gImprove", improve, "improve");
+    fillChips("#gLearn", learn, "learn");
+    var road = $("#roadmap"); road.textContent = "";
+    var steps = [];
+    st.forEach(function (s, i) { if (s === 1) steps.push([r.skills[i][0], "Improve", r.skills[i][2]]); });
+    st.forEach(function (s, i) { if (s === 0) steps.push([r.skills[i][0], "Learn", r.skills[i][1]]); });
+    if (!steps.length) {
+      var li = el("li"); var box = el("div");
+      box.appendChild(el("p", null, "No gaps in this sample. Real roles also check eligibility, education and your preferences."));
+      li.appendChild(box); road.appendChild(li);
+    }
+    steps.forEach(function (s) {
+      var li = el("li"), box = el("div"), head = el("p");
+      head.appendChild(el("b", null, s[0])); head.appendChild(el("span", "kind", s[1]));
+      box.appendChild(head); box.appendChild(el("p", null, s[2]));
+      li.appendChild(box); road.appendChild(li);
+    });
+  }
+  function setBtn(b, s, name) {
+    b.setAttribute("data-s", String(s));
+    b.querySelector(".st").textContent = STATE_LABEL[s];
+    b.setAttribute("aria-label", name + ": " + STATE_LABEL[s] + ". Activate to change.");
+  }
+  function renderSkills() {
+    var grid = $("#skillGrid"); grid.textContent = "";
+    var r = ROLES[role];
+    r.skills.forEach(function (sk, i) {
+      var b = el("button", "skill-btn"); b.type = "button";
+      b.appendChild(el("span", null, sk[0])); b.appendChild(el("span", "st"));
+      setBtn(b, r.state[i], sk[0]);
+      b.addEventListener("click", function () {
+        r.state[i] = (r.state[i] + 1) % 3;
+        setBtn(b, r.state[i], sk[0]);
+        renderResult();
+      });
+      grid.appendChild(b);
+    });
+    renderResult();
+  }
+  $$("#roleSeg input").forEach(function (inp) {
+    inp.addEventListener("change", function () { if (inp.checked) { role = inp.value; renderSkills(); } });
+  });
+  renderSkills();
+
+  /* Audience tabs */
+  var tabs = $$('[role="tab"]'), panels = $$('[role="tabpanel"]');
+  function selectTab(i, focus) {
+    tabs.forEach(function (t, j) {
+      var on = i === j;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+      panels[j].hidden = !on;
+    });
+    if (focus) tabs[i].focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener("click", function () { selectTab(i, false); });
+    t.addEventListener("keydown", function (e) {
+      var n = tabs.length;
+      if (e.key === "ArrowRight") { e.preventDefault(); selectTab((i + 1) % n, true); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); selectTab((i - 1 + n) % n, true); }
+      else if (e.key === "Home") { e.preventDefault(); selectTab(0, true); }
+      else if (e.key === "End") { e.preventDefault(); selectTab(n - 1, true); }
+    });
+  });
+
+  /* Early access form */
+  var form = $("#eaForm"), statusEl = $("#formStatus"), roleSel = $("#role");
+  var ORG = {
+    student: ["College", true], recruiter: ["Company", true], college: ["College or placement cell", true],
+    question: ["Organisation", false], "": ["College or company", false]
+  };
+  function syncOrg() {
+    var o = ORG[roleSel.value] || ORG[""];
+    $("#orgLabel").innerHTML = "";
+    $("#orgLabel").appendChild(document.createTextNode(o[0] + " "));
+    if (!o[1]) $("#orgLabel").appendChild(el("span", "opt", "(optional)"));
+  }
+  roleSel.addEventListener("change", syncOrg);
+  $$("a[data-role]").forEach(function (a) {
+    a.addEventListener("click", function () { roleSel.value = a.getAttribute("data-role"); syncOrg(); });
+  });
+  function setErr(id, msg) {
+    var f = $("#" + id), e = $("#" + id + "-err");
+    e.textContent = msg || "";
+    if (msg) f.setAttribute("aria-invalid", "true"); else f.removeAttribute("aria-invalid");
+    return !msg;
+  }
+  function validate() {
+    var bad = [];
+    function chk(id, msg) { if (!setErr(id, msg)) bad.push(id); }
+    chk("name", $("#name").value.trim() ? "" : "Enter your full name.");
+    chk("email", /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test($("#email").value.trim()) ? "" : "Enter a valid email address, like name@example.com.");
+    chk("role", roleSel.value ? "" : "Choose the option that describes you.");
+    var o = ORG[roleSel.value] || ORG[""];
+    chk("org", (o[1] && !$("#org").value.trim()) ? "Enter your " + o[0].toLowerCase() + "." : "");
+    chk("consent", $("#consent").checked ? "" : "Tick this box so we know we may contact you.");
+    return bad;
+  }
+  function showStatus(kind, text) {
+    statusEl.hidden = false; statusEl.className = "form-status " + kind; statusEl.textContent = text;
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    statusEl.hidden = true;
+    var bad = validate();
+    if (bad.length) { $("#" + bad[0]).focus(); return; }
+    var data = {
+      name: $("#name").value.trim(), email: $("#email").value.trim(), role: roleSel.value,
+      organisation: $("#org").value.trim(), message: $("#msg").value.trim(), consent: true,
+      submittedAt: new Date().toISOString()
+    };
+    if (!CONFIG.formEndpoint) {
+      showStatus("warn", "This preview is not connected to an inbox yet, so nothing was sent.");
+      return;
+    }
+    var btn = $("#submitBtn"); btn.disabled = true; btn.textContent = "Sending...";
+    fetch(CONFIG.formEndpoint, {
+      method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(new FormData(form)).toString()
+    }).then(function (res) {
+      if (!res.ok) throw new Error("bad status");
+      form.reset(); syncOrg();
+      showStatus("ok", "Thank you. You are on the list, and we will email you when access opens for your group.");
+    }).catch(function () {
+      showStatus("warn", "We could not send your details. Check your connection and try again.");
+    }).then(function () { btn.disabled = false; btn.textContent = "Join early access"; });
+  });
+})();
+</script>
+
+</body>
+</html>
